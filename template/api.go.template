@@ -2,6 +2,7 @@ package api
 
 import "github.com/gogf/gf/v2/frame/g"
 
+// {{.ClassName}}Base {{.ClassName}}基类
 type {{.ClassName}}Base struct {
 }
 
