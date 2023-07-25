@@ -3,11 +3,10 @@ package cmd
 import (
 	"context"
 
+	_ "github.com/gogf/gf/contrib/drivers/mysql/v2"
 	"github.com/gogf/gf/v2/frame/g"
 	"github.com/gogf/gf/v2/net/ghttp"
 	"github.com/gogf/gf/v2/os/gcmd"
-
-	"github.com/gogf/template-single/internal/controller/hello"
 )
 
 var (
@@ -20,7 +19,7 @@ var (
 			s.Group("/", func(group *ghttp.RouterGroup) {
 				group.Middleware(ghttp.MiddlewareHandlerResponse)
 				group.Bind(
-					hello.NewV1(),
+				// 路由绑定
 				)
 			})
 			s.Run()

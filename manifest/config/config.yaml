@@ -1,11 +1,18 @@
 server:
   address:     ":8000"
   openapiPath: "/api.json"
-  swaggerPath: "/swagger"
 
 logger:
   level : "all"
   stdout: true
+
+database:
+  logger:
+    level: "all"
+    stdout: true
+  default:
+    link: "mysql:root:123456@tcp(127.0.0.1:3306)/your_database"
+    debug: true
 
 
 
