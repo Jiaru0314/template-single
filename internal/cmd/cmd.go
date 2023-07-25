@@ -2,6 +2,7 @@ package cmd
 
 import (
 	"context"
+	"github.com/gogf/template-single/internal/consts"
 
 	_ "github.com/gogf/gf/contrib/drivers/mysql/v2"
 	"github.com/gogf/gf/v2/frame/g"
@@ -18,6 +19,10 @@ var (
 			s := g.Server()
 			s.Group("/", func(group *ghttp.RouterGroup) {
 				group.Middleware(ghttp.MiddlewareHandlerResponse)
+				group.GET("/swagger", func(r *ghttp.Request) {
+					r.Response.Write(consts.SwaggerUIPageContent)
+				})
+
 				group.Bind(
 				// 路由绑定
 				)
