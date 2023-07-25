@@ -1,13 +1,14 @@
 package main
 
 import (
+	"github.com/Jiaru0314/go_gen_code/gencode"
 	_ "github.com/gogf/gf/contrib/drivers/mysql/v2"
-	"github.com/gogf/gf/v2/os/gctx"
 	_ "github.com/gogf/template-single/internal/packed"
-
-	"github.com/gogf/template-single/internal/cmd"
 )
 
 func main() {
-	cmd.Main.Run(gctx.GetInitCtx())
+	//代码生成后去除!!!
+	gencode.GenALl()
+
+	//cmd.Main.Run(gctx.GetInitCtx())
 }
