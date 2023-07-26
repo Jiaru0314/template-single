@@ -5,6 +5,6 @@ gfcli:
   gen:
     dao:
       - link: "mysql:root:123456@tcp(127.0.0.1:3306)/your_database"
-        tables: "document"
+        tables: "yourTable1,yourTable2"
         descriptionTag: true
         noModelComment: true
