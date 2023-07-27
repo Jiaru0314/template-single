@@ -3,8 +3,12 @@ server:
   openapiPath: "/api.json"
 
 logger:
-  level : "all"
-  stdout: true
+  path: "log/"
+  file: "{Y-m-d}.log"
+  level: "all"
+  stdout: true  #是否同步输出到控制台
+  stdoutColorDisabled: true # 是否关闭终端的颜色打印。默认否，表示终端的颜色输出。
+  rotateBackupLimit: 7   # 保留7个日志文件
 
 database:
   logger:
