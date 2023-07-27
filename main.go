@@ -7,7 +7,7 @@ import (
 
 	"github.com/Jiaru0314/template-single/internal/cmd"
 	_ "github.com/Jiaru0314/template-single/internal/logic"
-	_ "github.com/Jiaru0314/template-single/internal/packed"
+	_ "github.com/Jiaru0314/template-single/internal/middleware"
 )
 
 func main() {
