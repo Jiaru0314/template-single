@@ -1,9 +1,4 @@
-/**
-  @author: 志强
-  @since: 2023/7/21
-  @desc: swagger自定义常量 用于swagger页面渲染
-**/
-
+// Package consts SwaggerUI集成
 package consts
 
 const (
@@ -20,11 +15,18 @@ const (
 <body>
 <div id="swagger-ui"></div>
 <script src="https://unpkg.com/swagger-ui-dist@latest/swagger-ui-bundle.js" crossorigin></script>
+<script src="https://unpkg.com/swagger-ui-dist@latest/swagger-ui-standalone-preset.js" crossorigin></script>
+
 <script>
 	window.onload = () => {
 		window.ui = SwaggerUIBundle({
 			url:    '/api.json',
 			dom_id: '#swagger-ui',
+			presets: [
+					  SwaggerUIBundle.presets.apis,
+					  SwaggerUIStandalonePreset
+			],
+			layout: "StandaloneLayout",
 		});
 	};
 </script>
