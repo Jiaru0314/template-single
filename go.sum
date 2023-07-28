@@ -2,8 +2,8 @@ github.com/BurntSushi/toml v0.4.1/go.mod h1:CxXYINrC8qIiEnFrOxCa7Jy5BFHlXnUU2pbi
 github.com/BurntSushi/toml v1.1.0/go.mod h1:CxXYINrC8qIiEnFrOxCa7Jy5BFHlXnUU2pbicEuybxQ=
 github.com/BurntSushi/toml v1.3.2 h1:o7IhLm0Msx3BaB+n3Ag7L8EVlByGnpq14C4YWiu/gL8=
 github.com/BurntSushi/toml v1.3.2/go.mod h1:CxXYINrC8qIiEnFrOxCa7Jy5BFHlXnUU2pbicEuybxQ=
-github.com/Jiaru0314/go_gen_code v1.3.0 h1:Z+oq2qvTXAY6EHvMtksKbdnKi6hCQvY70/JHuJ6jST0=
-github.com/Jiaru0314/go_gen_code v1.3.0/go.mod h1:ZvtBR42F1UrSnQau65QW7G7eWyb7hxWgf1Q5ZA7HjMQ=
+github.com/Jiaru0314/go_gen_code v1.4.0 h1:nJdzgwr/AlCQAI7naAebWi33Mh6k9NuRxDL5zZuJ9Tw=
+github.com/Jiaru0314/go_gen_code v1.4.0/go.mod h1:ZvtBR42F1UrSnQau65QW7G7eWyb7hxWgf1Q5ZA7HjMQ=
 github.com/cespare/xxhash/v2 v2.1.2/go.mod h1:VGX0DQ3Q6kWi7AoAeZDth3/j3BFtOZR5XLFGgcrjCOs=
 github.com/clbanning/mxj/v2 v2.5.5/go.mod h1:hNiWqW14h+kc+MdF9C6/YoRfjEJoR3ou6tn/Qo+ve2s=
 github.com/clbanning/mxj/v2 v2.7.0 h1:WA/La7UGCanFe5NpHF0Q3DNtnCsVoxbPKuyBNHWRyME=

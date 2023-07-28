@@ -1,0 +1,18 @@
+package router
+
+import (
+	"github.com/gogf/gf/v2/net/ghttp"
+	"github.com/Jiaru0314/template-single/internal/service"
+
+	"{{.ProjectName}}/internal/controller"
+)
+
+// RegisterAuthBizRouter 需要鉴权的业务路由注册 生成后可自行调整
+func RegisterAuthBizRouter(group *ghttp.RouterGroup) {
+	group.Middleware(service.Middleware().Auth) 鉴权中间件
+	group.Bind(
+		{{range $index, $value := .ClassNames}}
+               controller.{{$value}},
+            {{end}}
+	)
+}

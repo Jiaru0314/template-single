@@ -10,7 +10,7 @@ import (
 
 	"github.com/Jiaru0314/template-single/internal/consts"
 	"github.com/Jiaru0314/template-single/internal/controller"
-	"github.com/Jiaru0314/template-single/internal/service"
+	"github.com/Jiaru0314/template-single/internal/router"
 )
 
 var (
@@ -34,13 +34,11 @@ var (
 				// 业务路由绑定(不鉴权)
 				group.Bind(
 					controller.Captcha, // 验证码
+					controller.Login,   // 登录接口
 				)
 
-				// 业务路由绑定(鉴权)
-				group.Group("/", func(group *ghttp.RouterGroup) {
-					group.Middleware(service.Middleware().Auth)
-					group.Bind()
-				})
+				// 业务路由绑定(需要鉴权)
+				router.RegisterAuthBizRouter(group)
 			})
 			s.Run()
 			return nil
