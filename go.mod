@@ -4,7 +4,7 @@ go 1.15
 
 require (
 	github.com/BurntSushi/toml v1.3.2 // indirect
-	github.com/Jiaru0314/go_gen_code v1.6.0
+	github.com/Jiaru0314/go_gen_code v1.7.0
 	github.com/clbanning/mxj/v2 v2.7.0 // indirect
 	github.com/fatih/color v1.15.0 // indirect
 	github.com/fsnotify/fsnotify v1.6.0 // indirect
