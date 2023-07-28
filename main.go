@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/Jiaru0314/go_gen_code/codeGenUtil"
+	// "github.com/Jiaru0314/go_gen_code/codeGenUtil"
 	_ "github.com/gogf/gf/contrib/drivers/mysql/v2"
 	"github.com/gogf/gf/v2/os/gctx"
 
@@ -12,7 +12,7 @@ import (
 
 func main() {
 	// 代码生成后去除!!!
-	codeGenUtil.GenALl()
+	// codeGenUtil.GenALl()
 
 	cmd.Main.Run(gctx.GetInitCtx())
 }
