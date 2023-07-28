@@ -1,3 +1,4 @@
+// Package captcha 是基于 base64Captcha 实现的验证码生成服务
 package captcha
 
 import (

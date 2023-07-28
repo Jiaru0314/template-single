@@ -14,6 +14,7 @@ var Login = cLogin{}
 
 type cLogin struct{}
 
+// Login 用户登录
 func (*cLogin) Login(ctx context.Context, req *api.UserLoginReq) (res *api.UserLoginRes, err error) {
 	input := model.UserLoginInput{}
 	if err = gconv.Struct(req, &input); err != nil {

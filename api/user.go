@@ -16,7 +16,6 @@ type UserBase struct {
 type UserInfoRes struct {
 	Id       int    `json:"id" `
 	Username string `json:"username"`
-	Password string `json:"password"`
 	NickName string `json:"nick_name"`
 	Phone    string `json:"phone"`
 	Avatar   string `json:"avatar"`
@@ -24,13 +23,13 @@ type UserInfoRes struct {
 	Email    string `json:"email"`
 }
 
-// AddUserReq 新增
-type AddUserReq struct {
-	g.Meta `path:"/user" method:"post" tags:"用户模型" summary:"新增"`
+// UserRegisterReq 新增
+type UserRegisterReq struct {
+	g.Meta `path:"/user/register" method:"post" tags:"用户模型" summary:"注册"`
 	UserBase
 }
 
-type AddUserRes struct {
+type UserRegisterRes struct {
 	Id int `json:"id" dc:"id"`
 }
 
@@ -70,4 +69,11 @@ type UserLogoutRes struct {
 
 type GetCurrentUserInfoReq struct {
 	g.Meta `path:"/user/currentUser" method:"get" tags:"用户模型" summary:"获取当前用户信息"`
+}
+
+// UpdatePasswordReq 更新
+type UpdatePasswordReq struct {
+	g.Meta   `path:"/user/password/update" method:"put" tags:"用户模型" summary:"修改密码"`
+	Id       int    `json:"id" v:"required#用户模型ID不能为空" dc:"id"`
+	Password string `json:"password" v:"required#用户密码不能为空" dc:"密码"`
 }
