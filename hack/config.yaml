@@ -4,7 +4,7 @@
 gfcli:
   gen:
     dao:
-      - link: "mysql:root:123456@tcp(127.0.0.1:3306)/go_gencode"
-        tables: "user"
+      - link: "mysql:root:123456@tcp(127.0.0.1:3306)/your_database"
+        tables: "your_table1,your_table2"
         descriptionTag: true
         noModelComment: true

@@ -15,7 +15,7 @@ database:
     level: "all"
     stdout: true
   default:
-    link: "mysql:root:123456@tcp(127.0.0.1:3306)/go_gencode"
+    link: "mysql:root:123456@tcp(127.0.0.1:3306)/your_database"
     debug: true
 
 

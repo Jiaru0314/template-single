@@ -9,7 +9,7 @@ import (
 
 // RegisterAuthBizRouter 需要鉴权的业务路由注册 生成后可自行调整
 func RegisterAuthBizRouter(group *ghttp.RouterGroup) {
-	group.Middleware(service.Middleware().Auth) 鉴权中间件
+	group.Middleware(service.Middleware().Auth) // 鉴权中间件
 	group.Bind(
 		{{range $index, $value := .ClassNames}}
                controller.{{$value}},
