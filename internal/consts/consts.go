@@ -5,4 +5,5 @@ const (
 	LanguageZH         = "zh-CH"
 	LanguageUS         = "en-US"
 	I18NPath           = "resource/i18n"
+	JWTIdentityKey     = "userId"
 )

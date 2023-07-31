@@ -8,6 +8,7 @@ import (
 	"github.com/gogf/gf/v2/frame/g"
 	"github.com/gogf/gf/v2/util/gconv"
 
+	"github.com/Jiaru0314/template-single/internal/consts"
 	"github.com/Jiaru0314/template-single/internal/model"
 )
 
@@ -21,9 +22,9 @@ func init() {
 	auth := jwt.New(&jwt.GfJWTMiddleware{
 		Realm:           "test zone",
 		Key:             []byte("secret key"),
-		Timeout:         time.Minute * 15, // jwt过期时间
+		Timeout:         time.Minute * 60, // jwt过期时间
 		MaxRefresh:      time.Minute * 5,
-		IdentityKey:     "id",
+		IdentityKey:     consts.JWTIdentityKey,
 		TokenLookup:     "header: Authorization, query: token, cookie: jwt",
 		TokenHeadName:   "Bearer",
 		TimeFunc:        time.Now,
@@ -32,6 +33,7 @@ func init() {
 		PayloadFunc:     PayloadFunc,
 		IdentityHandler: IdentityHandler,
 		SendCookie:      true,
+		// CacheAdapter:    gcache.NewAdapterRedis(g.Redis()),
 	})
 	authService = auth
 }
@@ -86,8 +88,8 @@ func Authenticator(ctx context.Context) (interface{}, error) {
 	// TODO 用户验证逻辑实现
 	if in.UserName == "admin" {
 		return g.Map{
-			"id":       gconv.Int(16),
-			"userName": "徐志强",
+			consts.JWTIdentityKey: gconv.Int(16),
+			"userName":            "admin",
 		}, nil
 	}
 
