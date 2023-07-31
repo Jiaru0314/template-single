@@ -11,6 +11,8 @@ import (
 func RegisterAuthBizRouter(group *ghttp.RouterGroup) {
 	group.Middleware(service.Middleware().Auth) // 鉴权中间件
 	group.Bind(
+		controller.User,
+
 		{{range $index, $value := .ClassNames}}
                controller.{{$value}},
             {{end}}
