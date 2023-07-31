@@ -12,7 +12,7 @@ type {{.ClassName}}Base struct {
 // {{.ClassName}}Info {{.ClassName}}全部内容
 type {{.ClassName}}Info struct {
     {{.ClassName}}Base
-    Id int
+    Id int `json:"id"`
 }
 
 // Add{{.ClassName}}Input 创建{{.TableComment}}请求内容
@@ -27,7 +27,7 @@ type Add{{.ClassName}}Output struct {
 
 // Delete{{.ClassName}}Input 删除{{.TableComment}}请求内容
 type Delete{{.ClassName}}Input struct {
-	Id int
+	Id int `json:"id"`
 }
 
 // Delete{{.ClassName}}OutPut 删除{{.TableComment}}响应
@@ -38,7 +38,7 @@ type Delete{{.ClassName}}OutPut struct {
 // Update{{.ClassName}}Input 修改{{.TableComment}}请求内容
 type Update{{.ClassName}}Input struct {
 	{{.ClassName}}Base
-	Id int
+	Id int `json:"id"`
 }
 
 // Update{{.ClassName}}OutPut 修改{{.TableComment}}响应
@@ -48,9 +48,9 @@ type Update{{.ClassName}}OutPut struct {
 
 // Page{{.ClassName}}Input 分页获取{{.TableComment}}列表请求内容
 type Page{{.ClassName}}Input struct {
-	Page int // 分页号码
-	Size int // 分页数量，最大50
-	Sort int // 排序类型
+	Page int `json:"page"` // 分页号码
+	Size int `json:"size"` // 分页数量，最大50
+	Sort int `json:"sort"` // 排序类型
 	{{.ClassName}}Base
 }
 
@@ -64,7 +64,7 @@ type Page{{.ClassName}}Output struct {
 
 // Detail{{.ClassName}}Input 根据ID查询{{.TableComment}} 详情请求内容
 type Detail{{.ClassName}}Input struct {
-	Id int
+	Id int `json:"id"`
 }
 
 // Detail{{.ClassName}}Output 查询{{.TableComment}} 详情响应
