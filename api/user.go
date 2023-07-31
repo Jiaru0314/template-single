@@ -47,8 +47,8 @@ type UpdateUserRes struct {
 // UserLoginReq 用户登录请求内容
 type UserLoginReq struct {
 	g.Meta   `path:"/user/login" method:"post" tags:"用户模型" summary:"用户登录"`
-	UserName string
-	Password string
+	UserName string `json:"username"`
+	Password string `json:"password"`
 }
 
 // UserLoginRes 用户登录请求响应

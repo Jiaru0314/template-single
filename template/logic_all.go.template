@@ -3,6 +3,8 @@ package logic
 import (
 	_ "{{.ProjectName}}/internal/logic/captcha"
 
+	_ "github.com/Jiaru0314/template-single/internal/logic/user"
+
 	{{range $index, $value := .Imports}}
        _ {{$value}}
     {{end}}
